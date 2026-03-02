@@ -1,4 +1,5 @@
 
+const double pi=acos(-1.0);
 const double eps = 1e-9;
 
 int sign(double x) {
