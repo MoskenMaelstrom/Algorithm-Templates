@@ -1,6 +1,12 @@
 
-const double pi=acos(-1.0);
+const double pi=acosl(-1.0);
 const double eps = 1e-9;
+
+double Acos(double x) {
+	if(x < -1) return pi;
+	if(x > 1) return 0;
+	return acosl(x);
+};
 
 int sign(double x) {
     if (fabs(x) < eps) return 0;
@@ -62,7 +68,7 @@ Vector unit(Vector a) {
 
 // 两个非零向量的夹角 [0, PI]
 double get_angle(Vector a, Vector b) {
-    return acos(dot(a, b) / (get_length(a) * get_length(b)));
+    return Acos(dot(a, b) / (get_length(a) * get_length(b)));
 }
 
 // 混合积 (a * (b x c))：返回由三个向量构成的平行六面体的有向体积

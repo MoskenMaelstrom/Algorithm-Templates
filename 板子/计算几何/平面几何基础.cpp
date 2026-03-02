@@ -6,7 +6,13 @@
 //计算三点构成的平行四边形面积，计算多边形面积，点与多边形关系
 
 const double eps = 1e-9;
-const double PI = acos(-1.0);
+const double PI = acosl(-1.0);
+
+double Acos(double x) {
+	if(x < -1) return PI;
+	if(x > 1) return 0;
+	return acosl(x);
+};
 
 int sign(double x) {
     if (fabs(x) < eps) return 0;
