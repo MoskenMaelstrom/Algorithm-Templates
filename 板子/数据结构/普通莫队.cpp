@@ -1,9 +1,8 @@
 
+const int N=1e6;
 struct Q {
     int l,r,id;
 };
-
-const int N=1e6;
 
 	vector<int> a(n+1);
 	vector<int> cnt(N+1);
