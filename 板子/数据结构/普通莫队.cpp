@@ -5,7 +5,7 @@ struct Q {
 
 const int N=1e6;
 struct Mo {
-    int B;
+    int B,kind;
     vector<int> cnt,res;
     Mo(int n,int m,vector<int>& a,vector<Q>& que) {
         B=max(1ll,(int)(n / sqrt(m)));
@@ -17,7 +17,7 @@ struct Mo {
             return ((a.l / B) & 1) ? a.r < b.r : a.r > b.r;
         });
 
-		int kind=0;
+		kind=0;
         auto add=[&](int x) {
         	if (++cnt[a[x]] == 1) kind++;
         };
