@@ -31,7 +31,6 @@ struct DSU {
 		return siz[find(x)];
 	}
 	
-	//返回根的数量
 	int count() {
 		unordered_set<int> roots;
 		for(int i=0;i<f.size();i++) roots.insert(find(i));
