@@ -4,8 +4,7 @@
 		
 	};
 
-	int hi,lo,res; 
-    if (lo > hi) return -1;
+	int hi,lo,res;
     while (hi-lo > 3) {
         int m1=lo+(hi-lo)/3;
         int m2=hi-(hi-lo)/3;
