@@ -1,11 +1,10 @@
 
-//查找区间最大值
-auto f=[&](int x) {
-	
-};
+	//查找区间最大值,要求f是严格单峰
+	auto f=[&](int x) {
+		
+	};
 
-	int hi,lo,res; 
-    if (lo > hi) return -1;
+	int lo,hi,res; 
     while (hi-lo > 3) {
         int m1=lo+(hi-lo)/3;
         int m2=hi-(hi-lo)/3;
