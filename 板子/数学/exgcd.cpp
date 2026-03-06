@@ -16,7 +16,7 @@ int work(int a,int b,int p) {
     int d=exgcd(a,p,x,y);
     if (b % d != 0) return -1; 
     int mod=p/d;//通解周期
-    (x*=(b/d))%=mod;
-    return (x+mod)%mod;
+    x=((x%mod+mod)%mod)*((b/d)%mod)%mod;
+    return x;
 }
 int ans=work(a,b,p);
