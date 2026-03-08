@@ -1,8 +1,5 @@
 //2025 ICPC 沈阳 F
-//找无向图里的简单环，要求环是极小的
-#include<bits/stdc++.h>
-#define int long long
-using namespace std;
+//找无向图(无重边,无自环)里的简单环,要求环离起点是尽量近的,所以是双源bfs.
 
 void print(int u,int v) {
 	cout<<u+1<<" "<<v+1<<"\n";
@@ -59,6 +56,7 @@ void solve()
 		return -1;
 	};
 	
+	//避免LCA冲突
 	auto work=[&](int r,bool update) {
 		while (1) {
 			int p=fa[r];
@@ -106,20 +104,3 @@ void solve()
 		print(ans[i][0],ans[i][1]);
 	}
 }
-
-signed main()
-{
-	ios::sync_with_stdio(0);
-	cin.tie(nullptr);
-	int t;cin>>t;
-	while (t--)
-		solve();
-	return 0;
-}
-
-
-
-
-
-
-
