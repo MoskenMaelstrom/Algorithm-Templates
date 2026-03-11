@@ -32,8 +32,8 @@ struct DSU {
 	}
 	
 	int count() {
-		unordered_set<int> roots;
-		for(int i=0;i<f.size();i++) roots.insert(find(i));
-		return roots.size();
+		unordered_set<int> root;
+		for(int i=0;i<f.size();i++) root.insert(find(i));
+		return root.size();
 	}
 };

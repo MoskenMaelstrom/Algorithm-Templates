@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #define int long long
-#define ull unsigned long long
+using u64 = unsigned long long;
+using i128 = __int128;
 using namespace std;
 
 void solve()
