@@ -1,8 +1,9 @@
 
 struct B {
-	vector<int> b1(61),b2(61);
+	vector<int> b1,b2;
     int cnt;
     bool zero;
+    B() : b1(61,0),b2(61,0),cnt(0),zero(0) {}
 
     void insert(int x) {
         for (int i=60;i>=0;i--) {
