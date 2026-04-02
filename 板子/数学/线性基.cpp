@@ -28,7 +28,7 @@ struct B {
     int kth(int k) {
         if (zero) k--;
         if (k == 0) return 0;
-        if (k >= (1LL<<cnt)) return -1;// 找不到
+        if (k >= (1LL<<cnt)) return -1;
         
         int res=0;
         for (int i=0;i<cnt;i++)
