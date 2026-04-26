@@ -15,7 +15,6 @@ vector<vector<int>> operator * (const vector<vector<int>>& A,const vector<vector
 }
 
 vector<vector<int>> Pow(vector<vector<int>> E,vector<vector<int>> A,int exp) {
-	int n=A.size();
 	for(;exp;exp>>=1) {
 		if (exp&1) E=E*A;
 		A=A*A;

@@ -8,6 +8,7 @@ vector<vector<int>> operator * (const vector<vector<int>>& A,const vector<vector
         for (int k=0;k<n;k++) {
         	if (A[i][k] == inf) continue;
             for (int j=0;j<n;j++) {
+            	if (B[k][j] == inf) continue;
                 C[i][j]=min(C[i][j],A[i][k]+B[k][j]);
             }
         }
