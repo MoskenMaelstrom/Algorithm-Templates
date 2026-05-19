@@ -3,7 +3,6 @@ struct DSU {
     vector<int> f,siz;
     int cnt;
 
-    DSU():cnt(0) {}
     DSU(int n) {init(n);}
 
     void init(int n) {
@@ -14,16 +13,17 @@ struct DSU {
     }
 
     int find(int x) {
-        while (x != f[x]) x=f[x]=f[f[x]];
-        return x;
+    	if (x == f[x]) return x;
+    	int r=find(f[x]);
+        return f[x]=r;
     }
 
     bool merge(int x,int y) {
-        x=find(x);
-        y=find(y);
-        if (x == y) return 0;
-        siz[x]+=siz[y];
-        f[y]=x;
+        int fx=find(x);
+        int fy=find(y);
+        if (fx == fy) return 0;
+        siz[fx]+=siz[fy];
+        f[fy]=fx;
         cnt--;
         return 1;
     }
