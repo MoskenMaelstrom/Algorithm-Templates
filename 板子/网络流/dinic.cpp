@@ -2,7 +2,7 @@
 const int inf=1e18;
 struct Flow {
     int n;
-    vector<array<int,2>> edge;
+    vector<array<int,2>> edge;//[v,残量]
     vector<vector<int>> adj;
     vector<int> cur,h;
     
