@@ -14,7 +14,8 @@ signed main()
 {
 	ios::sync_with_stdio(0);
 	cin.tie(nullptr);
-	int t;cin>>t;
+	int t=1;
+	cin>>t;
 	while (t--)
 		solve();
 	return 0;
