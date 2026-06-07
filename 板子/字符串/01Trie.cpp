@@ -19,6 +19,18 @@ void insert(int x) {
     }
 }
 
+void erase(int x) {
+    int cur=0;
+    pass[cur]--;
+    for (int i=30;i>=0;i--) {
+        int b=(x>>i)&1;
+        int nxt=tree[cur][b];
+        pass[nxt]--;
+        if (pass[nxt] == 0) tree[cur][b]=0;
+        cur=nxt;
+    }
+}
+
 int query(int x) {
     int cur=0;
     int ans=0;
