@@ -82,13 +82,11 @@ int gauss(vector<vector<int>>& A,int n,int m) {
 // Gauss-Jordan消元
 	vector<bitset<1001>> A(n);
     int row=0;
-    vector<int> mark(n,-1);
     for(int col=0;col<m;col++) {
         int r=row;
         while (r < n and !A[r][col]) r++;
         if (r == n) continue;
         if (r != row) swap(A[r],A[row]);
-        mark[row]=col;
 
         for(int k=0;k<n;k++) {
             if (k != row and A[k][col]) A[k]^=A[row];
